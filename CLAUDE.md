@@ -8,6 +8,8 @@ I'm learning ROS 2 from scratch and building a portfolio project with it. Help m
 
 I do not want to build another differential-drive robot in Gazebo as the portfolio piece. Fine as a learning exercise inside the course, but it's the most-built project in robotics and adds nothing.
 
+**Git commits.** No Claude attribution (no `Co-Authored-By: Claude`, no `Claude-Session` line). Plain commit messages only.
+
 **How to work with me.**
 - Don't hand me finished thinking. Make me commit to an approach first, then tell me where it's weak and why. Structuring the problem counts as thinking, so make me attempt the shape before proposing one.
 - Cheap reps are fine (boilerplate, config, launch files, decoding error messages) but say when you're doing one.
