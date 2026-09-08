@@ -6,6 +6,8 @@
   <description>Learning packages for ROS2 pub/sub basics.</description>
   <maintainer email="inasaridzevato@gmail.com">termvato</maintainer>
   <license>MIT</license>
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
 
   <test_depend>ament_copyright</test_depend>
   <test_depend>ament_flake8</test_depend>

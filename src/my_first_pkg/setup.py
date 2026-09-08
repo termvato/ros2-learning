@@ -24,6 +24,8 @@ setup(
     },
     entry_points={
         'console_scripts': [
+            'talker = my_first_pkg.publisher_member_function:main',
+            'listener = my_first_pkg.subscriber_member_function:main',
         ],
     },
 )
