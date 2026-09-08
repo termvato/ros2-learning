@@ -47,17 +47,25 @@ ros2 run my_first_pkg talker
 ros2 run my_first_pkg listener
 ```
 
-The listener prints each message the talker publishes on `/topic`. To watch the traffic
-without the listener node:
+The listener prints each message the talker publishes on `/joint_states`. To watch the
+traffic without the listener node:
 
 ```bash
-ros2 topic echo /topic
+ros2 topic echo /joint_states
 ```
+
+`ros2 topic hz /joint_states` reports the actual publish rate, and
+`ros2 topic info /joint_states --verbose` shows the QoS of every publisher and subscriber
+on it, which is the first thing to check when a topic exists but no data arrives.
 
 ## Packages
 
 - `my_first_pkg` - minimal publisher and subscriber, following the official Jazzy
-  tutorials.
+  tutorials. Now publishes `sensor_msgs/JointState` with a stamped header rather than a
+  plain string, as a rehearsal for the pendulum interface.
+- `py_srvcli` - minimal service and client, following the official Jazzy tutorial.
+  Run the service with `ros2 run py_srvcli service`, then call it with
+  `ros2 run py_srvcli client 2 3`.
 
 ## Notes
 
