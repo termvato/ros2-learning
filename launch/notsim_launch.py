@@ -38,14 +38,11 @@ def generate_launch_description():
             # 'robot_description' is the name this node looks for; it is fixed.
             parameters=[{'robot_description': robot_description}]
         ),
-        # Sliders, one per non-fixed joint found in the robot description.
-        # Publishes /joint_states. Stands in for the real controller for now.
+        # publishes a predetermined joint states standing in for a simulation.
         Node(
-            package='joint_state_publisher_gui',
-            executable='joint_state_publisher_gui',
-            # ros_arguments wraps these in --ros-args for you.
-            # warn silences this node's chatty INFO output.
-            ros_arguments=['--log-level', 'warn']
+            package='pendulum_nodes',
+            executable='pendulum_pub',
+
         ),
         Node(
             package='rviz2',
